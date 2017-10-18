@@ -18,6 +18,7 @@ allprojects {
     }
 }
 
+// Help from https://stackoverflow.com/questions/31434928/android-gradle-task-google-appengine
 task startServer (dependsOn: [":backendapp:appengineRun"]) {
     project(":backendapp").afterEvaluate { backend ->
         backend.extensions.appengine.daemon = true
