@@ -1,10 +1,14 @@
 package com.udacity.gradle.builditbigger;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+
+import com.ravi.jokeviewer.ShowJokeActivity;
 
 /*import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;*/
@@ -37,7 +41,6 @@ public class MainActivityFragment extends Fragment implements EndpointsAsyncTask
 
     @Override
     public void showJoke(String result) {
-        joke = result;
         startActivity(new Intent(getContext(), ShowJokeActivity.class).putExtra("joke", result));
     }
 }
